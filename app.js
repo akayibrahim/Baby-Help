@@ -74,6 +74,6 @@ server.listen(4001);
 //ALTER USER 'root' IDENTIFIED WITH mysql_native_password BY 'babyhelp';
 //flush privileges;
 //docker exec -it appsDB bash 
-//mysql -uroot
+//mysql -uroot or mysql -u root -p 
 //https://medium.com/@avanthikameenakshi/building-restful-api-with-nodejs-and-mysql-in-10-min-ff740043d4be
 //
