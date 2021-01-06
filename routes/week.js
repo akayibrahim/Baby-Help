@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-	connection.query('SELECT TIMESTAMPDIFF(WEEK, u.birthDate, NOW()) + 1 as weeks FROM users u', function (error, results, fields) {
+	connection.query('SELECT TIMESTAMPDIFF(WEEK, u.birthDate, NOW()) + 1 as weeks FROM users u where id='+req.query.id, function (error, results, fields) {
 	  	if(error){
 	  		res.send(JSON.stringify({"status": 500, "error": error, "response": null})); 
 	  		//If there is error, we send the error in the error section with 500 status
