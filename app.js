@@ -13,6 +13,8 @@ var users = require('./routes/users');
 var helps = require('./routes/helps');
 var week = require('./routes/week');
 var month = require('./routes/month');
+var addUser = require('./routes/addUser');
+var updateUser = require('./routes/updateUser');
 
 var app = express();
 
@@ -47,6 +49,8 @@ app.use('/api/v1/users', users);
 app.use('/api/v1/helps', helps);
 app.use('/api/v1/week', week);
 app.use('/api/v1/month', month);
+app.use('/api/v1/addUser', addUser);
+app.use('/api/v1/updateUser', updateUser);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
