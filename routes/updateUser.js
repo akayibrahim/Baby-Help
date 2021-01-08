@@ -7,9 +7,10 @@ router.post('/', function(req, res, next) {
 	var sex = req.body.sex;
 	var birthDate = req.body.birthDate;
 	var name = req.body.name;
+	var language = req.body.language;
 	var id = req.body.id;
 
-	connection.query('update users set email="'+email+'",sex="'+sex+'",name="'+name+'",birthDate="'+new Date(birthDate).toISOString().split('T')[0]+'" where id='+id, function (error, results, fields) {
+	connection.query('update users set email="'+email+'",sex="'+sex+'",name="'+name+'",language="'+language+'",birthDate="'+new Date(birthDate).toISOString().split('T')[0]+'" where id='+id, function (error, results, fields) {
 	  	if(error){
 	  		res.send(JSON.stringify({"status": 500, "error": error, "response": null})); 
 	  		//If there is error, we send the error in the error section with 500 status
