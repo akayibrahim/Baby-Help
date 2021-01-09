@@ -30,12 +30,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 //Database connection
 app.use(function(req, res, next){
-	global.connection = mysql.createConnection({
-	  	host     : 'localhost',
+	global.connection = mysql.createConnection({ // global.connection = mysql.createPool({
+	  host     : process.env.MYSQL_HOST_IP,
       user     : 'root',
       password : 'babyhelp',
       database : 'babyhelp',
-      port: 6603,
+      port: process.env.MYSQL_HOST_PORT,
       insecureAuth : false,
 	});
 	connection.connect(function (err) {
