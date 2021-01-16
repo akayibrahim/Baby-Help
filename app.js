@@ -36,7 +36,7 @@ app.use(function(req, res, next){
       user     : 'root',
       password : 'babyhelp',
       database : 'babyhelp',
-      port: process.env.MYSQL_HOST_PORT,
+      port: '6603',//process.env.MYSQL_HOST_PORT,
       insecureAuth : false,
 	});
 	connection.connect(function (err) {
@@ -82,4 +82,5 @@ server.listen(4001);
 //docker exec -it appsDB bash 
 //mysql -uroot or mysql -u root -p 
 //https://medium.com/@avanthikameenakshi/building-restful-api-with-nodejs-and-mysql-in-10-min-ff740043d4be
-// docker-compose up --force-recreate -d api
+//docker-compose up --force-recreate -d api
+//docker-compose build --no-cache
