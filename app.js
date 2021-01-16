@@ -36,7 +36,7 @@ app.use(function(req, res, next){
       user     : 'root',
       password : 'babyhelp',
       database : 'babyhelp',
-      port: '6603',//process.env.MYSQL_HOST_PORT,
+      port: process.env.MYSQL_HOST_PORT,
       insecureAuth : false,
 	});
 	connection.connect(function (err) {
