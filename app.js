@@ -82,4 +82,4 @@ server.listen(4001);
 //docker exec -it appsDB bash 
 //mysql -uroot or mysql -u root -p 
 //https://medium.com/@avanthikameenakshi/building-restful-api-with-nodejs-and-mysql-in-10-min-ff740043d4be
-//
+// docker-compose up --force-recreate -d api
