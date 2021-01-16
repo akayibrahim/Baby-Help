@@ -15,6 +15,7 @@ var week = require('./routes/week');
 var month = require('./routes/month');
 var addUser = require('./routes/addUser');
 var updateUser = require('./routes/updateUser');
+var read = require('./routes/read');
 
 var app = express();
 
@@ -51,6 +52,7 @@ app.use('/api/v1/week', week);
 app.use('/api/v1/month', month);
 app.use('/api/v1/addUser', addUser);
 app.use('/api/v1/updateUser', updateUser);
+app.use('/api/v1/read', read);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
