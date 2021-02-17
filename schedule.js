@@ -1,8 +1,8 @@
 const cronJob = require('cron').CronJob;
 var mysql= require('mysql');
 
- process.env['MYSQL_HOST_IP'] = 'localhost';
- process.env['MYSQL_HOST_PORT'] = '6603';
+// process.env['MYSQL_HOST_IP'] = 'localhost';
+// process.env['MYSQL_HOST_PORT'] = '6603';
 
  // SELECT * FROM helps WHERE ID IN ( SELECT b.ID FROM users a, helps b WHERE a.ID = 17 AND !FIND_IN_SET(b.ID, REPLACE(a.READ, ';', ',') ) ) AND ( WEEK LIKE CONCAT( "%;", CONCAT( ( SELECT CONCAT( TIMESTAMPDIFF(WEEK, u.birthDate, NOW()) + 1, ";") FROM users u WHERE id = 17 ), "%" ) ) OR MONTH LIKE CONCAT( "%;", CONCAT( ( SELECT CONCAT( TIMESTAMPDIFF(MONTH, u.birthDate, NOW()) + 1, ";") FROM users u WHERE id = 17 ), "%" ) ) ) LIMIT 1
 
