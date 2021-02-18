@@ -7,7 +7,7 @@ var mysql= require('mysql');
  // SELECT * FROM helps WHERE ID IN ( SELECT b.ID FROM users a, helps b WHERE a.ID = 17 AND !FIND_IN_SET(b.ID, REPLACE(a.READ, ';', ',') ) ) AND ( WEEK LIKE CONCAT( "%;", CONCAT( ( SELECT CONCAT( TIMESTAMPDIFF(WEEK, u.birthDate, NOW()) + 1, ";") FROM users u WHERE id = 17 ), "%" ) ) OR MONTH LIKE CONCAT( "%;", CONCAT( ( SELECT CONCAT( TIMESTAMPDIFF(MONTH, u.birthDate, NOW()) + 1, ";") FROM users u WHERE id = 17 ), "%" ) ) ) LIMIT 1
 
 
-const job = new cronJob('*/5 * * * * *', () => {
+const job = new cronJob('* * */10 * * *', () => {
     global.connection = mysql.createPool({ // global.connection = mysql.createPool({
         connectionLimit : 10,
         host     : process.env.MYSQL_HOST_IP,
