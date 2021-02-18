@@ -9,6 +9,7 @@ var mysql= require('mysql');
 
 const job = new cronJob('*/5 * * * * *', () => {
     global.connection = mysql.createPool({ // global.connection = mysql.createPool({
+        connectionLimit : 10,
         host     : process.env.MYSQL_HOST_IP,
         user     : 'root',
         password : 'babyhelp',
