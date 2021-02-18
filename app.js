@@ -29,8 +29,8 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
- process.env['MYSQL_HOST_IP'] = 'localhost';
- process.env['MYSQL_HOST_PORT'] = '6603';
+// process.env['MYSQL_HOST_IP'] = 'localhost';
+// process.env['MYSQL_HOST_PORT'] = '6603';
 
 //Database connection
 app.use(function(req, res, next){
