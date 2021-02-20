@@ -29,28 +29,32 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// process.env['MYSQL_HOST_IP'] = 'localhost';
-// process.env['MYSQL_HOST_PORT'] = '6603';
+process.env['MYSQL_HOST_IP'] = 'localhost';
+ process.env['MYSQL_HOST_PORT'] = '6603';
 
 //Database connection
-app.use(function(req, res, next){
-	global.connection = mysql.createPool({ // global.connection = mysql.createConnection({
+app.use(function(req, res, next) {
+  if (global.connection) {
+    next();
+  } else {
+    global.connection = mysql.createPool({ // global.connection = mysql.createConnection({
 	    host     : process.env.MYSQL_HOST_IP,
       user     : 'root',
       password : 'babyhelp',
       database : 'babyhelp',
       port: process.env.MYSQL_HOST_PORT,
-      insecureAuth : false,
       queueLimit : 0, // unlimited queueing
       connectionLimit : 0 // unlimited connections
-  });
+  })
   /*
 	connection.connect(function (err) {
     if (err) throw err;
     console.log ('Connected');
   });
   */
+  console.log ('Connected');
   next();  
+  }
 });
 
 app.use('/', index);
@@ -78,10 +82,10 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+app.listen(4001, () => {
+  console.log("Server listening on port : " + 4001);
+});
 module.exports = app;
-var server = http.createServer(app);
-server.listen(4001);
-
 
 //DEBUG=babyhelpdb:* npm start
 //ALTER USER 'root' IDENTIFIED BY 'babyhelp'; 
