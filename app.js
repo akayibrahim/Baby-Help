@@ -35,13 +35,14 @@ app.use(express.static(path.join(__dirname, 'public')));
 //Database connection
 app.use(function(req, res, next){
 	global.connection = mysql.createPool({ // global.connection = mysql.createConnection({
-      connectionLimit : 10,
 	    host     : process.env.MYSQL_HOST_IP,
       user     : 'root',
       password : 'babyhelp',
       database : 'babyhelp',
       port: process.env.MYSQL_HOST_PORT,
       insecureAuth : false,
+      queueLimit : 0, // unlimited queueing
+      connectionLimit : 0 // unlimited connections
   });
   /*
 	connection.connect(function (err) {

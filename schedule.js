@@ -16,6 +16,8 @@ const job = new cronJob('*/5 * 10 * * *', () => {
         database : 'babyhelp',
         port: process.env.MYSQL_HOST_PORT,
         insecureAuth : false,
+        queueLimit : 0, // unlimited queueing
+        connectionLimit : 0 // unlimited connections
       });
       pool.getConnection(function(err, connection) {
         connection.query('SELECT * from users', function (error, results, fields) {
