@@ -2,9 +2,9 @@
 
 BabyHelp is a comprehensive mobile application designed to support parents of newborns and toddlers aged 0-3 years. This app provides guidance on various aspects of baby care, including growth and development milestones, health, nutrition, and more. BabyHelp is the go-to resource for new parents, helping you navigate the exciting and sometimes challenging journey of parenthood with confidence.
 
-<img width="460" alt="image" src="https://user-images.githubusercontent.com/6277451/234098520-fa474bd2-4b9b-4171-8794-5a5c8abeb355.png">
-<img width="460" alt="image" src="https://user-images.githubusercontent.com/6277451/234098553-9e0f6fbf-d39d-4a96-bd7b-5b1956b46ce7.png">
-<img width="460" alt="image" src="https://user-images.githubusercontent.com/6277451/234098601-baaa6a46-8a7a-45b4-b4d6-c3e464606dd4.png">
+<img width="260" alt="image" src="https://user-images.githubusercontent.com/6277451/234098520-fa474bd2-4b9b-4171-8794-5a5c8abeb355.png">
+<img width="260" alt="image" src="https://user-images.githubusercontent.com/6277451/234098553-9e0f6fbf-d39d-4a96-bd7b-5b1956b46ce7.png">
+<img width="260" alt="image" src="https://user-images.githubusercontent.com/6277451/234098601-baaa6a46-8a7a-45b4-b4d6-c3e464606dd4.png">
 
 ## Key Features
 
